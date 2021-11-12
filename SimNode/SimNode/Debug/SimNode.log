@@ -1,0 +1,9 @@
+﻿  Node.cpp
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C3646: _node: неизвестный спецификатор переопределения
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\sergo\source\repos\SimNode\SimNode\Node.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  SimLAN.cpp
+  SimNode.cpp
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C3646: _node: неизвестный спецификатор переопределения
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  Создание кода...
