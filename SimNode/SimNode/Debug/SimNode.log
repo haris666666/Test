@@ -1,9 +1,11 @@
-﻿  Node.cpp
-C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C3646: _node: неизвестный спецификатор переопределения
-C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
-C:\Users\sergo\source\repos\SimNode\SimNode\Node.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  SimLAN.cpp
+﻿  SimLAN.cpp
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(11,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(53,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(58,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(77,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(82,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.cpp(104,21): warning C4018: <: несоответствие типов со знаком и без знака
   SimNode.cpp
-C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C3646: _node: неизвестный спецификатор переопределения
-C:\Users\sergo\source\repos\SimNode\SimNode\SimLAN.h(16,12): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
   Создание кода...
+  SimNode.vcxproj -> C:\Users\sergo\source\repos\SimNode\Debug\SimNode.exe

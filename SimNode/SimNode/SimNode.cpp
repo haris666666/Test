@@ -2,27 +2,19 @@
 #include "Node.h"
 #include "SimLAN.h"
 
+
+
+
 int main()
 {
     SimLAN _simLan;
-    Node _node;
-    Node _node1;
-    _node.SubEvent(&_node1);
-    _node1.SubEvent(&_node);
- /*
-    _node1.GetSubscriptions();
-    _node1.GetFollowers();
-    _node.GetSubscriptions();
-    _node.GetFollowers();
-    */
-    _node.UnSubEvent(&_node1);
-    _node1.UnSubEvent(&_node);
+    _simLan.Create(); // без этого иногда вылазит ошибка
+    _simLan.StartSim();
 
-    _node1.GetSubscriptions();
-    _node1.GetFollowers();
-    _node.GetSubscriptions();
-    _node.GetFollowers();
-   // std::cout << _simLan.Field.size();
- 
+
+    /*  Симуляция работает, но я очень не уверен что правильно.
+    Я смог сделать лишь упрощенную версию, где узел может иметь лишь одну подписку на другой узел
+    и если "фолловеров" нет, то узел уничтожается, по крайней мере должен. Так же нет рабочей передачи числа
+    по подписке и узел не может создать другой узел.*/
 }
 

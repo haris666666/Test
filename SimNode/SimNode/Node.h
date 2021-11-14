@@ -2,22 +2,27 @@
 #include <iostream>
 #include <cstdlib>
 #include <list>
-#include "SimLAN.h"
+#include <vector>
+
+
+
 
 class Node
 {
 public:
-	int AddEvent();
+	int AddEvent(Node* node);
 	void SubEvent(Node *node);
 	void UnSubEvent(Node *node);
 	void SCreate(int index);
-	void GetSubscriptions();
-	void GetFollowers();
+	Node GetSubscriptions();
+	int GetFollowers();
+	void SetNode(Node* node);
+	int GetSumSub();
 	
 private:
-	//SimLAN _simLAN;
-	bool EnabledSub;
-	std::list<int> Subscriptions = { };
-	std::list<int> Followers = {  };
+	Node* _nodeSub; 
+	
+	int sumSub = 0;
+	int _followers = 0;
 };
 

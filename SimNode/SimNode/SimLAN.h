@@ -3,6 +3,8 @@
 #include "Node.h"
 #include <cstdlib>
 #include <vector>
+
+
 class SimLAN
 {
 public:
@@ -11,13 +13,14 @@ public:
 	void Create();
 	void SimLogic();
 	void Update();
-	//std::vector<Node> Field = {  };
+
 private:
-	Node _node;
-	//std::vector<Node> _field;
+	std::vector<Node*> Field = {  };
+
+	SimLAN *_simLan;
+
+	int _numberOfNodes;
 	float _randCountNode;
-	float _randSub;
-	float _speedIteration;
-	
+	int _subChance;
 };
 

@@ -2,47 +2,61 @@
 #include <stdlib.h>
 #include <time.h>
 
-int Node::AddEvent()
+int Node::AddEvent(Node* node)
 {
 	int RandInt;
 	srand(time(0));
 	RandInt = rand() % 10 + 1;
 	return RandInt;
+
+	(*node).sumSub += RandInt;
 }
 
-void Node::SubEvent(Node *node)
+void Node::SubEvent(Node* node)
 {
-	Subscriptions.push_back(1);
-	(*node).Followers.push_back(0);
+	if (_nodeSub != node)
+	{
+		_nodeSub = node;
+		(*node)._followers++;
+		//AddEvent(node); возвращает лишь нули в выводе, убрал
+	}
+	else
+		std::cout << "Already subscribed" << std::endl;
 }
 
 void Node::UnSubEvent(Node *node)
-{                                   // нужен Field из SimLan, т.к. нужно знать кто именно подписывался ранее
-	Subscriptions.pop_back();       // сейчас лишь ансабнется последняя подписка и последний фолловер
-	(*node).Followers.pop_back();
+{             
+		_nodeSub = NULL;
+		(*node)._followers--;
+}
+	
+
+
+void Node::SCreate(int index) // метод, создающий и подписывающий узлы. Сделать не получилось
+{                              
+
+
 }
 
-void Node::SCreate(int index)
-{                              // нужен Field из SimLan
-
-
-}
-
-void Node::GetSubscriptions()
+Node Node::GetSubscriptions()
 {
-	for (auto iter = Subscriptions.begin(); iter != Subscriptions.end(); iter++)
-	{
-		//system("pause");
-		std::cout << *iter << "\t";
-	}
+	return *_nodeSub;
 }
 
-void Node::GetFollowers()
+int Node::GetFollowers()
 {
-	for (auto iter = Followers.begin(); iter != Followers.end(); iter++)
-	{
-		std::cout << *iter << "\t";
-	}
+	return _followers;
 }
+
+void Node::SetNode(Node* node)
+{
+	_nodeSub = node;
+}
+
+int Node::GetSumSub()
+{
+	return sumSub;
+}
+
 
 
